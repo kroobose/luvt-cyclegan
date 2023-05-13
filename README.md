@@ -232,5 +232,5 @@ yarl                    1.8.1
 zipp                    3.8.1
 ```
 ## 元のGitHub
-- 疑問あれば，[元のGithub](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)を参考にしてください．
+- その他疑問あれば，[元のGithub](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)のissue参考にしてください．
 - 別のデータのダウンロードして，CycleGAN以外にもpix2pix等も試せます．
