@@ -1,0 +1,25 @@
+version: '3'
+services:
+  cyclegan:
+    # restart: always
+    stdin_open: true
+    build: .
+    shm_size: '16gb'
+    container_name: 'cyclegan_cont'
+    working_dir: '/workspace'
+    tty: true
+    volumes:
+      - ~/wf/luvt-cyclegan:/workspace
+      - /ndt-data/alldata/domAandB/A:/workspace/src/datasets/luvt/trainA
+      - /ndt-data/alldata/domAandB/B:/workspace/src/datasets/luvt/trainB
+    image: cyclegan
+    deploy:
+      resources:
+        limits:
+          memory: 16gb
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
